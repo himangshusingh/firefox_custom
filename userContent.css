@@ -1,0 +1,16 @@
+:root {
+    --accent-color: #212121;
+}
+
+body.activity-stream{
+    background-color: var(--accent-color) !important;
+}
+button.search-handoff-button{
+    background-color: var(--accent-color) !important;
+    box-shadow: 0 2px 6px rgba(109, 109, 109, 0.15);
+    border: 1px solid #424242 !important;
+}
+
+div.logo{
+    display: none !important;
+}
