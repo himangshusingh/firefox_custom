@@ -1,16 +1,5 @@
+@import 'colours/userColor.css';
 
-/* Base color for the theme, dependent on whether it's a light theme or not*/
-@media (prefers-color-scheme: dark) {
-    :root {
-        --accent-color: #212121;
-    }
-}
-
-@media (prefers-color-scheme: light) {
-    :root {
-        --accent-color: #212121;
-    }
-}
 
 
 /*====== Aesthetics ======*/
@@ -157,30 +146,18 @@ toolbar#nav-bar {
 
   padding-block-start: 1px !important;
 
-  outline: none !important;
-  box-shadow: none !important;
+  /* outline: 0.5px dotted #424242 !important; */
+    outline: none !important;
+  /* removes the black box shadow */
+   box-shadow: none !important;
 
 }
 
-
-#urlbar-background { border: transparent !important; }
-
-#urlbar[focused='true']
-  > #urlbar-background,
-#urlbar:not([open])
-  > #urlbar-background { background: var(--accent-color) !important; }
+/* changes the colour of the current tab */
+.tabbrowser-tab:is([visuallyselected], [multiselected]) .tab-background {
+    background-color: var(--tabcolour) !important;
+    background-image: none !important;
+    }
 
 
-#urlbar[open]
-  > #urlbar-background { background: var(--accent-color) !important; }
-
-
-.urlbarView-row:hover
-  > .urlbarView-row-inner,
-.urlbarView-row[selected]
-  > .urlbarView-row-inner { background: var(--accent-color) !important; }
-
-
-.urlbar-icon, #urlbar-go-button { margin: auto; }
-.urlbar-page-action { padding: 0 inherit !important; }
-.urlbar-page-action .urlbar-icon { margin-top: 1px !important; }
+/* first material colou #2C3333 */
