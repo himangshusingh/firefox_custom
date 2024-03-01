@@ -159,5 +159,22 @@ toolbar#nav-bar {
     background-image: none !important;
     }
 
+/*this changes the colour of the text in the tabs section*/
+/*reference link [https://www.reddit.com/r/FirefoxCSS/comments/1b2yhkv/is_there_any_way_to_change_the_color_of_the_text/]*/
+.tab-label {
+    color: var(--tab-inside-text-color) !important;
+  }
+  
+  
+  /* removes the close tab (cross option) button on each tab */
+  .tabbrowser-tab .tab-close-button {
+    visibility: collapse !important;
+  }
+  
+  /* remove the new tab (+) button */
+  #tabs-newtab-button{
+      display: none !important;
+}
+
 
 /* first material colou #2C3333 */
