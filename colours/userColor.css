@@ -1,23 +1,25 @@
-/* Base color for the theme, dependent on whether it's a light theme or not*/
 @media (prefers-color-scheme: dark) {
     :root {
-        --accent-color: #212121;
+        --accent-color: #2b2a2a;
     }
 }
 
 @media (prefers-color-scheme: light) {
     :root {
-        --accent-color: #212121;
+        --accent-color: #2b2a2a;
     }
 }
 :root{
-    --tabcolour: #424242;
-    --search-handoff-button-colour: #424242;
+    --tabcolour: #332f2f;
+    --search-handoff-button-colour: #605553;
+	--tab-inside-text-color: #ffffff;
+	--urlbar-color: #ffffff;
 }
 
 /* colorpallele{
     #000000
-    #212121
-    #303030
-    #424242
+    #2b2a2a
+    #332f2f
+    #605553
+    #ffffff
 } */

@@ -1,9 +1,12 @@
 @import 'colours/userColor.css';
 
+
+
 body.activity-stream{
     background-color: var(--accent-color) !important;
 }
 button.search-handoff-button{
+	display: none;
     background-color: var(--accent-color) !important;
     box-shadow: 0 2px 6px rgba(109, 109, 109, 0.15);
     border: 1px solid var(--search-handoff-button-colour) !important;
@@ -12,3 +15,24 @@ button.search-handoff-button{
 div.logo{
     display: none !important;
 }
+
+.search-wrapper .logo-and-wordmark .wordmark {
+    background: unset !important;
+}
+    
+.search-wrapper .logo-and-wordmark .wordmark::before {
+    content: 'catppuccinno';
+    width: inherit;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+	align-content: center;    /*aligns the content in center*/
+    align-items: center;
+    font-size: 100px;
+    font-family: Baletta;
+    font-weight: 600;
+	color: #FBEED7;         /*this is the color of text*/
+	/*border: 1px solid red;*/	
+  }
+
+

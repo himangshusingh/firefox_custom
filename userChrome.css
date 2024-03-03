@@ -1,7 +1,5 @@
 @import 'colours/userColor.css';
 
-
-
 /*====== Aesthetics ======*/
 
 #navigator-toolbox {
@@ -18,10 +16,17 @@ toolbar#nav-bar {
     box-shadow: none !important;
 }
 
+
+/*gives a subtle padding on top of url bar and disables its overlap when maximised*/
+#urlbar[breakout] {
+	top: 5px !important;
+}
+
 /* Sets the URL bar color */
 #urlbar {
     background: var(--accent-color) !important;
 }
+
 
 #urlbar-background {
     background: var(--accent-color) !important;
@@ -29,14 +34,15 @@ toolbar#nav-bar {
 }
 
 #urlbar-input-container {
-    border: none !important;
+    border: 0.2px solid #605553 !important;
+    text-align: center;
 }
 
 
 /*====== UI Settings ======*/
 
 :root {
-    --navbarWidth: 500px; /* Set width of navbar */
+    --navbarWidth: 100%; /* Set width of navbar */
 }
 
 /* If the window is wider than 1000px, use flex layout */
@@ -95,7 +101,7 @@ toolbar#nav-bar {
 /* Remove UI elements */
 #identity-box,                                                      /* Site information */
 #tracking-protection-icon-container,                                /* Shield icon */
-#page-action-buttons > :not(#urlbar-zoom-button, #star-button-box), /* All url bar icons except for zoom level and bookmarks */
+#page-action-buttons > :not(#urlbar-zoom-button, #star-button-box),  /* All url bar icons except for zoom level and bookmarks */
 #urlbar-go-button,                                                  /* Search URL magnifying glass */
 #alltabs-button,                                                    /* Menu to display all tabs at the end of tabs bar */
 .titlebar-buttonbox-container                                       /* Minimize, maximize, and close buttons */ {
@@ -117,6 +123,7 @@ toolbar#nav-bar {
 
 /* Fix URL bar overlapping elements */
 #urlbar-container {
+	
     min-width: initial !important;
 }
 
@@ -140,17 +147,20 @@ toolbar#nav-bar {
     padding: 0px !important; 
 }
 
-/* copied css */
+/* url bar border remove */
 #urlbar,
 #urlbar * {
 
-  padding-block-start: 1px !important;
-
-  /* outline: 0.5px dotted #424242 !important; */
+	padding-block-start: 1px !important;
+	/*outline: 0.5px solid #ffffff !important;*/
     outline: none !important;
-  /* removes the black box shadow */
-   box-shadow: none !important;
+	/* removes the black box shadow */
+   
+}
 
+#urlbar:not(.hidden-focus)[focused="true"],
+.searchbar-textbox[focused="true"] {
+  border-color: var(--urlbar-color) !important;
 }
 
 /* changes the colour of the current tab */
@@ -159,22 +169,27 @@ toolbar#nav-bar {
     background-image: none !important;
     }
 
+
 /*this changes the colour of the text in the tabs section*/
 /*reference link [https://www.reddit.com/r/FirefoxCSS/comments/1b2yhkv/is_there_any_way_to_change_the_color_of_the_text/]*/
 .tab-label {
-    color: var(--tab-inside-text-color) !important;
-  }
-  
-  
-  /* removes the close tab (cross option) button on each tab */
-  .tabbrowser-tab .tab-close-button {
-    visibility: collapse !important;
-  }
-  
-  /* remove the new tab (+) button */
-  #tabs-newtab-button{
-      display: none !important;
+  color: var(--tab-inside-text-color) !important;
 }
 
 
-/* first material colou #2C3333 */
+/* removes the close tab (cross option) button on each tab */
+.tabbrowser-tab .tab-close-button {
+  visibility: collapse !important;
+}
+
+/* remove the new tab (+) button */
+#tabs-newtab-button{
+	display: none !important;
+}
+/* first material color #2C3333 */
+
+
+
+
+
+

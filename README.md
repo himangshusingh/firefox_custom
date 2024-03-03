@@ -1,9 +1,9 @@
 ## Description
 
-This is a custom css for firefox, it gets rid of the title bar and other disturbing elements, giving the bare minimum and a dark material feel
+Custom files for firefox, it gets rid of the title bar and other disturbing elements, giving the bare minimum and a dark material feel
 
-![css_firefox](https://github.com/reyan1357/firefox_custom/assets/71934967/683ab931-e5ef-46ea-a7cc-7de3c4ade4f1)
+![Screenshot (311)](https://github.com/himangshusingh/firefox_custom/assets/71934967/dc934294-818c-499c-a49b-ad017221bb51)
 
-![Screenshot (254)](https://github.com/reyan1357/firefox_custom/assets/71934967/534dda5c-e20d-4ac4-b4b8-719463e43ded)
+![Screenshot (312)](https://github.com/himangshusingh/firefox_custom/assets/71934967/887c6f0a-2e62-4820-9864-42893eb0b55c)
 
-![Screenshot (253)](https://github.com/reyan1357/firefox_custom/assets/71934967/3d91a96e-cb36-4a66-87e3-a2f4b5857134)
+![Screenshot (313)](https://github.com/himangshusingh/firefox_custom/assets/71934967/58800fe8-9222-4af7-b2e5-f6282ef37552)
