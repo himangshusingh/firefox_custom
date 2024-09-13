@@ -16,10 +16,18 @@ div.logo{
     display: none !important;
 }
 
+
+
 .search-wrapper .logo-and-wordmark .wordmark {
     background: unset !important;
 }
-    
+
+/* hide the settings button from the homepage */
+.personalize-button { 
+    display: none !important; 
+}
+
+
 .search-wrapper .logo-and-wordmark .wordmark::before {
     content: 'catppuccinno';
     width: inherit;
@@ -29,10 +37,31 @@ div.logo{
 	align-content: center;    /*aligns the content in center*/
     align-items: center;
     font-size: 100px;
-    font-family: Baletta;
+    font-family: "Baletta";
     font-weight: 600;
-	color: #FBEED7;         /*this is the color of text*/
+	/* color: #FBEED7;         this is the color of text */
+    color: var(--textcolor);
 	/*border: 1px solid red;*/	
   }
+ 
+@-moz-document url-prefix("about:") {
+  :root {
+    --in-content-page-background: var(--accent-color) !important;
+    --in-content-box-background: var(--search-handoff-button-colour) !important;
+    --in-content-table-background: var(--search-handoff-button-colour) !important;
+  }
+}
+
+#root .customize-menu {
+	background-color: var(--accent-color) !important;
+}
 
 
+/*changes the default teal colour, */
+host, :root {
+    --in-content-primary-button-background: var(--settings-searchbar-border) !important;
+	--color-accent-primary: var(--settings-searchbar-border) !important;
+	--link-color: var(--settings-searchbar-border) !important;
+	--link-color-hover: var(--settings-searchbar-border) !important;
+	--link-color-active: var(--settings-searchbar-border) !important;
+}

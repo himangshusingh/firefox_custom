@@ -1,6 +1,26 @@
 @import 'colours/userColor.css';
 
+/* new settings */
+
+
+
+/* new settings end*/
+
+/* Remove border from search bar */
+/* Only show dots in search bar when hovered */
+#urlbar #identity-box::after,
+#urlbar #page-action-buttons::before {
+   opacity: 0;
+}
+
+#urlbar:hover #identity-box::after,
+#urlbar:hover #page-action-buttons::before {
+  opacity: 0.2;
+ transition: opacity 100ms ease;
+}
+
 /*====== Aesthetics ======*/
+
 
 #navigator-toolbox {
     border-bottom: none !important;
@@ -19,7 +39,7 @@ toolbar#nav-bar {
 
 /*gives a subtle padding on top of url bar and disables its overlap when maximised*/
 #urlbar[breakout] {
-	top: 5px !important;
+    top: 5px !important;
 }
 
 /* Sets the URL bar color */
@@ -27,22 +47,23 @@ toolbar#nav-bar {
     background: var(--accent-color) !important;
 }
 
-
 #urlbar-background {
     background: var(--accent-color) !important;
     border: none !important;
 }
 
-#urlbar-input-container {
+.urlbar-input-container {
     border: 0.2px solid #605553 !important;
     text-align: center;
+    font-family: Ubuntu-Regular;						/*changes the url bar font*/
 }
 
 
 /*====== UI Settings ======*/
 
 :root {
-    --navbarWidth: 100%; /* Set width of navbar */
+    --navbarWidth: 100%;
+    /* Set width of navbar */
 }
 
 /* If the window is wider than 1000px, use flex layout */
@@ -53,7 +74,7 @@ toolbar#nav-bar {
         flex-wrap: wrap;
     }
 
-    /*  Url bar  */
+    /*  Nav bar  */
     #nav-bar {
         order: 1;
         width: var(--navbarWidth);
@@ -72,26 +93,29 @@ toolbar#nav-bar {
         order: 3;
         width: 100%;
     }
-    
+
     /* Fix urlbar sometimes being misaligned */
+    /*
     :root[uidensity="compact"] #urlbar {
         --urlbar-toolbar-height: 39.60px !important;
     }
 
     :root[uidensity="touch"] #urlbar {
         --urlbar-toolbar-height: 49.00px !important;
-    }
+    }*/
 }
 
 /*====== Simplifying interface ======*/
 
 /* Autohide back button when disabled */
-#back-button, #forward-button {
+#back-button,
+#forward-button {
     transform: scale(1, 1) !important;
     transition: margin-left 150ms var(--animation-easing-function), opacity 250ms var(--animation-easing-function), transform 350ms var(--animation-easing-function) !important;
 }
 
-#back-button[disabled="true"], #forward-button[disabled="true"] {
+#back-button[disabled="true"],
+#forward-button[disabled="true"] {
     margin-left: -34px !important;
     opacity: 0 !important;
     transform: scale(0.8, 0.8) !important;
@@ -99,21 +123,35 @@ toolbar#nav-bar {
 }
 
 /* Remove UI elements */
-#identity-box,                                                      /* Site information */
-#tracking-protection-icon-container,                                /* Shield icon */
-#page-action-buttons > :not(#urlbar-zoom-button, #star-button-box),  /* All url bar icons except for zoom level and bookmarks */
-#urlbar-go-button,                                                  /* Search URL magnifying glass */
-#alltabs-button,                                                    /* Menu to display all tabs at the end of tabs bar */
-.titlebar-buttonbox-container                                       /* Minimize, maximize, and close buttons */ {
+#identity-box,
+/* Site information */
+#tracking-protection-icon-container,
+/* Shield icon */
+#page-action-buttons> :not(#urlbar-zoom-button, #star-button-box),
+/* All url bar icons except for zoom level and bookmarks */
+#urlbar-go-button,
+/* Search URL magnifying glass */
+#alltabs-button,
+/* Menu to display all tabs at the end of tabs bar */
+.titlebar-buttonbox-container
+
+/* Minimize, maximize, and close buttons */
+    {
     display: none !important;
 }
 
 #nav-bar {
     box-shadow: none !important;
 }
+
+/* hamburgur menu color */
+#appMenu-popup {
+    --arrowpanel-background: var(--accent-color) !important;
+}
+
 /* removes the extensions icon */
-#unified-extensions-button { 
-    display: none !important; 
+#unified-extensions-button {
+    display: flex !important;
 }
 
 /* Remove "padding" left and right from tabs */
@@ -123,73 +161,103 @@ toolbar#nav-bar {
 
 /* Fix URL bar overlapping elements */
 #urlbar-container {
-	
     min-width: initial !important;
 }
 
+/* color of url in the url drop down menu */
+.urlbarView-url {
+    color: var(--url-color) !important;
+}
+
+/* change the colour of current selected row in url-bar */
+#urlbar-results>*[selected=""] {
+    background-color: var(--url-current-row) !important;
+}
+
+/* hides the tabs visibility always at all window sizes */
+#tabbrowser-tabs {
+    visibility: collapse !important;
+}
+
 /* Remove gap after pinned tabs */
-#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
-> #tabbrowser-arrowscrollbox
-> .tabbrowser-tab[first-visible-unpinned-tab] {
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])>#tabbrowser-arrowscrollbox>.tabbrowser-tab[first-visible-unpinned-tab] {
     margin-inline-start: 0 !important;
 }
 
 /* Hide the hamburger menu */
-#PanelUI-menu-button { 
+
+/*
+#PanelUI-menu-button {
     padding: 0px !important;
 }
 
-#PanelUI-menu-button .toolbarbutton-icon { 
-    width: 1px !important; 
+#PanelUI-menu-button .toolbarbutton-icon {
+    width: 1px !important;
 }
 
 #PanelUI-menu-button .toolbarbutton-badge-stack {
-    padding: 0px !important; 
+    padding: 0px !important;
 }
+*/
 
 /* url bar border remove */
 #urlbar,
 #urlbar * {
 
-	padding-block-start: 1px !important;
-	/*outline: 0.5px solid #ffffff !important;*/
+    padding-block-start: 1px !important;
+    /*outline: 0.5px solid #ffffff !important;*/
     outline: none !important;
-	/* removes the black box shadow */
-   
+    /* removes the black box shadow */
+
 }
 
 #urlbar:not(.hidden-focus)[focused="true"],
 .searchbar-textbox[focused="true"] {
-  border-color: var(--urlbar-color) !important;
+    border-color: var(--urlbar-color) !important;
 }
 
 /* changes the colour of the current tab */
 .tabbrowser-tab:is([visuallyselected], [multiselected]) .tab-background {
     background-color: var(--tabcolour) !important;
     background-image: none !important;
-    }
+}
+
+
 
 
 /*this changes the colour of the text in the tabs section*/
 /*reference link [https://www.reddit.com/r/FirefoxCSS/comments/1b2yhkv/is_there_any_way_to_change_the_color_of_the_text/]*/
 .tab-label {
-  color: var(--tab-inside-text-color) !important;
+    color: var(--tab-inside-text-color) !important;
 }
 
 
 /* removes the close tab (cross option) button on each tab */
 .tabbrowser-tab .tab-close-button {
-  visibility: collapse !important;
+    visibility: collapse !important;
 }
 
 /* remove the new tab (+) button */
-#tabs-newtab-button{
-	display: none !important;
+#tabs-newtab-button {
+    display: none !important;
+}
+
+
+/* .menupopup-arrowscrollbox {
+    background-color: var(--accent-color) !important;
+    color: #ffffff !important;
+    border-color: wheat!important;
+} */
+menupopup{
+    --panel-background: var(--accent-color) !important;
+}
+panel{
+    --panel-background: var(--accent-color) !important;
+}
+menupopup, panel {
+    /* --panel-background: white !important; */
+    /* --panel-color: var(--accent-color) !important; */
+    --panel-border-radius: 4px !important;
+    --panel-border-color: rgb(245, 222, 179) !important;
 }
 /* first material color #2C3333 */
-
-
-
-
-
-
