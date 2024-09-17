@@ -1,8 +1,8 @@
-## Description
+# Description
 
 Custom files for firefox, it gets rid of the title bar and other disturbing elements, giving the bare minimum and a dark material feel
 
-#### Layout
+## Layout
 ----------------------------------------------
 
 ![1](https://github.com/user-attachments/assets/a030f8d6-c76d-4647-8c90-bfa71ff2d250)
