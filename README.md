@@ -21,3 +21,14 @@ Custom files for firefox, it gets rid of the title bar and other disturbing elem
 ------------------------------------------------
 
 ![5](https://github.com/user-attachments/assets/337eb2a0-d940-449e-98a2-f20fb0d72d2d)
+
+
+------------------------------------------------
+
+### Known Problems
+
+- manually declutter the home page  
+- remove the toolbar icons manually
+- some settings are not working in linux
+- no idea of macos, (couldn't test that)
+- some settings are not working in windows (like the dark mode has to be set manually)
