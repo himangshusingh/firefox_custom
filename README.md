@@ -2,8 +2,22 @@
 
 Custom files for firefox, it gets rid of the title bar and other disturbing elements, giving the bare minimum and a dark material feel
 
-![Screenshot (311)](https://github.com/himangshusingh/firefox_custom/assets/71934967/dc934294-818c-499c-a49b-ad017221bb51)
+#### Layout
+----------------------------------------------
 
-![Screenshot (312)](https://github.com/himangshusingh/firefox_custom/assets/71934967/887c6f0a-2e62-4820-9864-42893eb0b55c)
+![1](https://github.com/user-attachments/assets/a030f8d6-c76d-4647-8c90-bfa71ff2d250)
 
-![Screenshot (313)](https://github.com/himangshusingh/firefox_custom/assets/71934967/58800fe8-9222-4af7-b2e5-f6282ef37552)
+------------------------------------------------
+![2](https://github.com/user-attachments/assets/2b59e4e0-7a75-4c54-861a-89b3265f3770)
+
+------------------------------------------------
+
+![3](https://github.com/user-attachments/assets/61eb432b-1fab-436d-b911-88a2605aba1c)
+
+------------------------------------------------
+
+![4](https://github.com/user-attachments/assets/73dd5ed9-afaa-4dc1-8456-07d9cc7084f4)
+
+------------------------------------------------
+
+![5](https://github.com/user-attachments/assets/337eb2a0-d940-449e-98a2-f20fb0d72d2d)
